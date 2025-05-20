@@ -1,15 +1,21 @@
-# Ex.No:3(A)  STRING AND ITS OPERATIONS IN JAVA
+# Ex.No:3(B) STRING BUFFER IN JAVA
+
 ## AIM:
-To create a java program to read input and print length of the string in java.
+To develop a java program use append() method concatenates the given argument with this String and use stringbuffer class.
 
 ## ALGORITHM :
-1.  Start the Program.
-2.	Import `Scanner` and define class `demo`
+1.	Start the program.
+2.	Import `Scanner` and define class `concat`
 3.	In `main`:
 -	a) Create `Scanner` object `sc`
--	b) Read a line of text into `String` variable `str`
-4.	Print "The size of the String is " + `str.length()`
-5.	End
+-	b) Read two strings `a` and `b` from user input
+4.	Create a `StringBuffer` object `sb` initialized with string `a`
+5.	Append a space and string `b` to `sb`
+6.	Print the concatenated result from `sb`
+7.	End
+
+
+
 
 
 
@@ -17,29 +23,25 @@ To create a java program to read input and print length of the string in java.
 ## PROGRAM:
  ```
 /*
-Program to implement a String and its Operations using Java
+Program to implement a String Buffer using Java
 Developed by: HEMANTH BABU M B
-RegisterNumber: 212222222015
+RegisterNumber:  
 */
 ```
 
 ## Sourcecode.java:
 ```
-import java.util.Scanner;
-public class Main {
-	public static void main(String[] args)
-	{
-    	// Here str is a string object
-   	Scanner sc = new Scanner(System.in);  // Create a Scanner object
-   	String str = sc.nextLine();
-
- 
-    	System.out.println(
-        	"The size of "
-        	+ "the String is "
-        	+ str.length());
-	}
-}
+import java.util.*;
+public class StringBufferExample{  
+public static void main(String args[]){  
+Scanner sc=new Scanner(System.in);
+String str1=sc.nextLine();
+String str2=sc.nextLine();
+StringBuffer sb=new StringBuffer(str1+" ");  
+sb.append(str2);  
+System.out.println(sb);  
+}  
+}  
 ```
 
 
@@ -48,10 +50,14 @@ public class Main {
 
 
 ## OUTPUT:
+```
+Input         Expected       Got
 
-![image](https://github.com/user-attachments/assets/4182d974-4794-4220-94a1-2db096882f0b)
+Hello         Hello Java     Hello Java
+Java 
 
-
+Hi            Hi Welcome     Hi Welcome
+Welcome
+```
 ## RESULT:
-Thus the java Program to read input and print length of the string in java was executed successfully.
-
+Thus the java program use append() method concatenates the given argument with this String and use stringbuffer class was executed successfully.
